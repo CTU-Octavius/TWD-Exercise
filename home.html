@@ -22,7 +22,7 @@
 
         /* Navbar Styling */
         nav {
-            background-color: #4ABFBF; /* Darker teal background for the navbar */
+            background-color: #a7d5d0; /* Darker teal background for the navbar */
             padding: 15px;
             display: flex;
             justify-content: space-between;
@@ -42,16 +42,16 @@
             font-size: 18px;
             padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s; /* Added transition to the hover */
         }
 
         nav a:hover {
-            background-color: #2A9D8F; /* Even darker teal on hover */
+            background-color: #4ABFBF; /* Darker teal on hover */
         }
 
         /* Header text styling */
         header {
-            background-color: #2A9D8F; /* Dark teal background for the header */
+            background-color: #a7d5d0; /* Dark teal background for the header */
             color: white;
             padding: 20px 0;
         }
@@ -74,26 +74,34 @@
         }
 
         .search-container input {
-            padding: 10px;
-            width: 300px;
+            padding: 12px 20px;
+            width: 350px;
             font-size: 18px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-right: 10px;
+            border-radius: 30px; /* Smoother rounded corners */
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a smooth effect */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        .search-container input:focus {
+            outline: none;
+            border-color: #4ABFBF; /* Change border color on focus */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow when focused */
         }
 
         .search-container button {
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-size: 18px;
             background-color: #7FDBDB;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px; /* Smoother rounded corners for the button */
             cursor: pointer;
             transition: background-color 0.3s;
+            margin-left: 10px; /* Space between the input and the button */
         }
 
         .search-container button:hover {
-            background-color: #4ABFBF;
+            background-color: #4ABFBF; /* Darker teal on hover */
         }
 
         /* Main content styling */
@@ -122,8 +130,8 @@
             margin-bottom: 20px;
         }
 
-        /* Button styling */
-        button {
+        /* Button styling for Learn More */
+        .card button {
             background-color: #7FDBDB; /* Light teal button */
             color: white;
             border: none;
@@ -134,7 +142,7 @@
             transition: background-color 0.3s;
         }
 
-        button:hover {
+        .card button:hover {
             background-color: #4ABFBF; /* Darker teal on hover */
         }
 
@@ -155,25 +163,6 @@
         }
     </style>
 </head>
-<style>
-    .search-bar {
-    display: flex;
-}
-
-.search-bar input {
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-}
-
-.search-bar button {
-    padding: 5px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-</style>
 <body>
     <header>
         <nav>
