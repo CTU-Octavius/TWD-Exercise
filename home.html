@@ -1,33 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
+    <style>
+        /* General reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text color */
+            line-height: 1.6;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #4ABFBF; /* Darker teal background for the navbar */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo space (if you want to add a logo) */
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+
+        /* Navbar links styling */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2A9D8F; /* Even darker teal on hover */
+        }
+
+        /* Header text styling */
+        header {
+            background-color: #2A9D8F; /* Dark teal background for the header */
+            color: white;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 36px;
+        }
+
+        header h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #f4f4f4; /* Lighter text color for contrast */
+        }
+
+        /* Main content styling */
+        main {
+            background-color: #2A9D8F; /* Dark teal background for main content */
+            color: white; /* White text to contrast with the dark background */
+            padding: 20px;
+            border-radius: 8px; /* Optional: rounded corners for a more modern look */
+            margin: 20px;
+        }
+
+        main h1 {
+            font-size: 28px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        main p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #7FDBDB; /* Light teal button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4ABFBF; /* Darker teal on hover */
+        }
+
+        /* Footer styling for share text */
+        main .share {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
 </head>
-<style></style>
+<body>
     <header>
         <nav>
-            Topic
-            <a href="home.html">HOME</a>
-            <a href="browse.html">BROWSE TOPICS</a>
-            <a href="works.html">HOW IT WORKS</a>
-            <a href="faqs.html">FAQS</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="pages.html">PAGES</a>
+            <div class="logo">Logo</div> <!-- You can replace "Logo" with an actual image if needed -->
+            <div>
+                <a href="home.html">HOME</a>
+                <a href="browse.html">BROWSE TOPICS</a>
+                <a href="works.html">HOW IT WORKS</a>
+                <a href="faqs.html">FAQS</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="pages.html">PAGES</a>
+            </div>
         </nav>
         <h1>DISCOVER. LEARN. ENJOY</h1>
-            <h2>platfrom for creatives around the world</h2>
+        <h2>Platform for creatives around the world</h2>
+    </header>
 
-</header>
-<body>
-    <h1>Web Design</h1>
-    <p>When you search for free CSS templates, you will notice that TempalteMo is one of the best websites.</p>
+    <main>
+        <h1>Web Design</h1>
+        <p>When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
 
-    <h1>Finance</h1>
-    <p>Topic Listing Templates include home page, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements.</p>
-    <button type="button">Learn More</button>
-    <p>Share: </p>
+        <h1>Finance</h1>
+        <p>Topic Listing Templates include home page, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements.</p>  
+        
+        <button type="button">Learn More</button>
 
+        <p class="share">Share: </p>
+    </main>
 </body>
 </html>
