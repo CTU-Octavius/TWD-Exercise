@@ -67,22 +67,57 @@
             color: #f4f4f4; /* Lighter text color for contrast */
         }
 
-        /* Main content styling */
-        main {
-            background-color: #2A9D8F; /* Dark teal background for main content */
-            color: white; /* White text to contrast with the dark background */
-            padding: 20px;
-            border-radius: 8px; /* Optional: rounded corners for a more modern look */
-            margin: 20px;
-        }
-
-        main h1 {
-            font-size: 28px;
-            color: white;
+        /* Search bar styling */
+        .search-container {
+            text-align: center;
             margin-top: 20px;
         }
 
-        main p {
+        .search-container input {
+            padding: 10px;
+            width: 300px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #7FDBDB;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-container button:hover {
+            background-color: #4ABFBF;
+        }
+
+        /* Main content styling */
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #2A9D8F; /* Dark teal background for cards */
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 48%; /* Two cards side by side */
+        }
+
+        .card h1 {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .card p {
             font-size: 18px;
             margin-bottom: 20px;
         }
@@ -104,9 +139,19 @@
         }
 
         /* Footer styling for share text */
-        main .share {
+        .card .share {
             margin-top: 20px;
             font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .card {
+                width: 100%; /* Full width for smaller screens */
+            }
         }
     </style>
 </head>
@@ -144,18 +189,28 @@
         </nav>
         <h1>DISCOVER. LEARN. ENJOY</h1>
         <h2>Platform for creatives around the world</h2>
+        
+        <!-- Search bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
+        </div>
     </header>
 
     <main>
-        <h1>Web Design</h1>
-        <p>When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
+        <div class="card">
+            <h1>Web Design</h1>
+            <p>When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
+            <button type="button">Learn More</button>
+            <p class="share">Share: </p>
+        </div>
 
-        <h1>Finance</h1>
-        <p>Topic Listing Templates include home page, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements.</p>  
-        
-        <button type="button">Learn More</button>
-
-        <p class="share">Share: </p>
+        <div class="card">
+            <h1>Finance</h1>
+            <p>Topic Listing Templates include home page, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements.</p>
+            <button type="button">Learn More</button>
+            <p class="share">Share: </p>
+        </div>
     </main>
 </body>
 </html>
