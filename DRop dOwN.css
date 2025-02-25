@@ -1,0 +1,63 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+h1 {
+    text-align: left;
+}
+
+
+img {align-self: left}
+
+.faq {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Style the questions */
+details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+/* Style the summary (question) */
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Style the answer */
+details p {
+    padding: 10px;
+    margin: 0;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+/* Add some animation for smooth dropdown */
+details[open] p {
+    animation: dropdown 0.3s ease;
+}
+
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
