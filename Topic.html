@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <style>
+        /* General reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            text-align: center;
+			color: white;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text color */
+            line-height: 1.6;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #a7d5d0; /* Darker teal background for the navbar */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo space (if you want to add a logo) */
+        .logo {
+            width: 50px;
+            height: auto;
+            color: rgb(2, 2, 2);
+        }
+
+        /* Navbar links styling */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s; 
+        }
+
+        nav a:hover {
+            background-color: #a7d5d0; /* Darker teal on hover */
+        }
+
+        /* Header text styling */
+        header {
+            background-color: #a7d5d0; /* Dark teal background for the header */
+            color: white;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 36px;
+        }
+
+        header h3 {
+            text-align: center;
+            font-size: 14px;
+            color:  #2A9D8F; /* Lighter text color for contrast */
+          
+        }
+
+        /* Search bar styling */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-container input {
+            padding: 12px 20px;
+            width: 350px;
+            font-size: 11px;
+            border-radius: 30px; /* Smoother rounded corners */
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a smooth effect */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        .search-container input:focus {
+            outline: none;
+            border-color: #4ABFBF; /* Change border color on focus */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow when focused */
+        }
+
+        .search-container button {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #72bfbf;
+            border: none;
+            border-radius: 30px; /* Smoother rounded corners for the button */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px; /* Space between the input and the button */
+        }
+
+        .search-container button:hover {
+            background-color: #4ABFBF; /* Darker teal on hover */
+        }
+
+        /* Main content styling */
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: #4ABFBF;
+        }
+
+
+        .card1 {
+            background-color: #fcffff; /* Dark teal background for cards */
+            color: rgb(19, 19, 19);
+            padding: 20px;
+            border-radius: 8px;
+            width: 48%; /* Two cards side by side */
+        }
+
+        .card1 h1 {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .card1 p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling for Learn More */
+        .card1 button {
+            background-color: #7FDBDB; /* Light teal button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card1 button:hover {
+            background-color: #4ABFBF; /* Darker teal on hover */
+        }
+
+        /* Footer styling for share text */
+        .card1 .share {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .card1 {
+                width: 100%; /* Full width for smaller screens */
+            }
+        }
+
+        /*second card*/
+
+        .card2 {
+            background-color: #2A9D8F; /* Dark teal background for cards */
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 48%; /* Two cards side by side */
+        }
+
+        .card2 h1 {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .card2 p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling for Learn More */
+        .card2 button {
+            background-color: #7FDBDB; /* Light teal button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card2 button:hover {
+            background-color: #4ABFBF; /* Darker teal on hover */
+        }
+
+        /* Footer styling for share text */
+        .card2 .share {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .card2 {
+                width: 100%; /* Full width for smaller screens */
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            border: 2px solid #333;
+            padding: 15px;
+            text-align: center;
+            width: 30%;
+            background-color: white;
+            border-radius: 10px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .fancy-nav {
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .fancy-nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .fancy-nav a:hover {
+            color: #ff6600;
+            transform: translateY(-3px);
+        }
+
+        .fancy-nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ff6600;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .fancy-nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><h1>Topic</h1></div> 
+            <div>
+                <a href="home.html">HOME</a>
+                <a href="browse.html">BROWSE TOPICS</a>
+                <a href="works.html">HOW IT WORKS</a>
+                <a href="faqs.html">FAQS</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="pages.html">PAGES</a>
+            </div>
+        </nav>
+        <h1>DISCOVER. LEARN. ENJOY</h1>
+        <h3>Platform for creatives around the world</h3>
+        
+        <!-- Search bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Design, Code, Marketing, Finance...">
+            <button type="button">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="card1">
+            <h1>Web Design</h1>
+            <p>When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
+            <button type="button">Learn More</button>
+            <p class="share">Share: </p>
+        </div>
+
+        <div class="card2">
+            <h1>Finance</h1>
+            <p>Topic Listing Templates include home page, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements.</p>
+            <button type="button">Learn More</button>
+            <p class="share">Share: </p>
+        </div>
+    </main>
+
+    
+   <div class="container">
+    <div class="box">
+        <h2>Web Design</h2>
+        <p>Topic Listing Templates based on Bootstrap 5</p>
+        <img src="wb.PNG" alt="one">
+    </div>
+
+    <div class="box">
+        <h2>Graphic</h2>
+        <p>Lorem Ipsum dolor sit amet consectetur</p>
+        <img src="g.PNG" alt="two">
+    </div>
+
+    <div class="box">
+        <h2>Logo Design</h2>
+        <p>Lorem Ipsum dolor sit amet consectetur</p>
+        <img src="ld.PNG" alt="three">
+    </div>
+</div>
+
+<h1>How does it work?</h1>
+	<h2>Search your favourite topic</h2>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, cumque magnam? Sequi, cupiditate quibusdam alias illum sed esse ad dignissimos libero sunt, quisquam numquam aliquam? Voluptas, accusamus omnis?</p>
+	<h2>Bookmark & Keep it for yourself</h2>
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam omnis est vel quo, nihil repellat quia velit error modi earum similique odit labore. Doloremque, repudiandae?</p>
+	<h2>Read & Enjoy</h2>
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vero quisquam, rem assumenda similique voluptas distinctio, iste est hic eveniet debitis ut ducimus beatae id? Quam culpa deleniti officiis autem?</p>
+
+    <h1>Frequently Asked 
+        <br>Questions</h1>
+        
+        <div align="right" class="faq">
+           
+        
+        
+        
+        <img align="left" src="FAQ PIC.jpg" style="width: 370px; height: 321px;">
+        
+        
+        
+            <details>
+                <summary>What is Topic Listing</summary>
+                <p>Topic Listing is free Bootstrap 5 CSS template. You are not allowed to redistribute this template on any other template collection website without our permission. Please contact TemplateMo for more detail.
+        
+        Thank you.</p>
+            </details>
+        
+            <details>
+                <summary>How to find a topic?</summary>
+                <p>C??????</p>
+            </details>
+        
+            <details>
+                <summary>Does it need to paid </summary>
+                <p>JavaScript is a programming language that makes web pages interactive. It adds functionality like dynamic content and user interactions.</p>
+            </details>
+        </div>
+
+</body>
+
+<center>
+		
+	<section class="Touch">
+		
+		<div class="head">
+
+			<center> <h2 style="color: black"> Get In Touch </h2></center>
+	
+			<br>
+			<br>
+
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.3875776241057!2d-122.42357922371471!3d37.804389810452776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858127459fabad%3A0x808ba520e5e9edb7!2sFrancisco%20Park!5e0!3m2!1sen!2sza!4v1740418279626!5m2!1sen!2sza" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+			<div class="box">
+			<h2>Head Office</h2>
+			<p style="color: grey">Bay St &, Larkin St, San <br>
+			Francisco, CA 94109, United <br>
+			States</p>
+
+			<hr>
+
+			<p>Phone <a href="tel:3052409671">305-240-9671 </a> <br> Email <a href="mailto:info@company.com">Info@company </a> </p>
+			
+		</div>
+
+		<div class="box">
+
+			<h2>Dubai Office</h2>
+
+			<p style="color: grey"> Burj Park, Downtown Dubai, <br> United Arab Emirates</p>
+
+			<hr>
+
+			<p style="color: grey"> Phone <a href="tel:3052409671">110-220-3400 </a> <br> Email <a href="mailto:info@company.com">info@company.com</a> </p>
+		
+		</div>
+	    </div>
+		</center>
+		</section>
+		<center>
+
+		<br>
+		<br>
+
+<footer>
+    <footer class="footer">
+   <div class="footer-container">
+       <div class="logo">
+           <h3>Topic</h3>
+       </div>
+       <div class="links">
+           <div class="Resources">
+               <h4>Resources</h4>
+               <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">How it works</a></li>
+                   <li><a href="#">FAQs</a></li>
+                   <li><a href="#">Contact</a></li>
+               </ul>
+           </div>
+           <div class="Resources">
+               <h4>Information</h4>
+               <p>305-240-9671</p>
+               <p><a href="mailto:info@company.com">info@company.com</a></p>
+           </div>
+           <div class="Resources">
+               <button class="arrow">English </button>
+           </div>
+       </div>
+   </div>
+   <div class="Copyright">
+       <p>Copyright © 2048 Topic Listing Center. All rights reserved.</p>
+       <p>Design: <a href="#">TemplateMo</a></p>
+   </div>
+</center>
+
+</footer>
+</html>
